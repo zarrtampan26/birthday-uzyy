@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f8b4d4 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+.header .subtitle {
+    font-size: 1.2em;
+    opacity: 0.95;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 0;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    text-align: center;
+    color: #ec4899;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+section h3 {
+    color: #db2777;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.welcome-card,
+.about-card,
+.game-card,
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.15);
+    border: 2px solid #fbcfe8;
+    transition: all 0.3s ease;
+}
+
+.welcome-card:hover,
+.about-card:hover,
+.game-card:hover,
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(236, 72, 153, 0.25);
+}
+
+.welcome-card h2,
+.about-card h3 {
+    color: #ec4899;
+    margin-bottom: 15px;
+}
+
+.welcome-card p,
+.about-card p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(236, 72, 153, 0.3);
+}
+
+/* Game Section */
+.game-section {
+    text-align: center;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-card p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.heart-button {
+    background: none;
+    border: none;
+    font-size: 4em;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin: 20px 0;
+    animation: pulse 1.5s infinite;
+}
+
+.heart-button:hover {
+    transform: scale(1.2);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.game-stats {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.game-stats p {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #ec4899;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ec4899;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #fbcfe8;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ec4899;
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.2);
+}
+
+/* Wishes List */
+.wishes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.wish-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #ec4899;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.1);
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease;
+}
+
+.wish-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wish-name {
+    font-weight: 700;
+    color: #ec4899;
+    margin-bottom: 8px;
+}
+
+.wish-text {
+    color: #666;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(236, 72, 153, 0.1);
+    border-radius: 15px;
+    margin-top: 40px;
+    color: #666;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    .heart-button {
+        font-size: 2.5em;
+    }
+
+    .wishes-list {
+        grid-template-columns: 1fr;
+    }
+
+    .game-stats {
+        gap: 20px;
+    }
+  }
