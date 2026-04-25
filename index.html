@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Hari Spesial Uzyy 💝</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>✨ Selamat Ulang tahun maniss ✨</h1>
+            <p class="subtitle">Untuk Seorang Wanita Spesial</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-card">
+                    <h2>🎉 Halo Uzyy! 🎉</h2>
+                    <p>Hari ini adalah hari istimewa buat rayain kehadiran kamu di dunia ini.</p>
+                    <p>ayo kita rayain bersama dengan momen-momen yang indah!</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section">
+                <button class="btn-primary" onclick="toggleAbout()">👩 Tentang Uzyy</button>
+                <div class="about-text" style="display: none;">
+                    <div class="about-card">
+                        <h3>Profil Uzyy</h3>
+                        <p>Uzyy adalah seseorang yang istimewa, penuh dengan kebaikan, senyuman yang indah, dan hati yang tulus.</p>
+                        <p>Setiap hari samaa kamu adalah keberuntungan. Terima kasih udah lahir ke dunia ini.</p>
+                        <p><strong>Tanggal Spesial:</strong> <span id="birthDate">2012 - 2026</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game Section -->
+            <section class="game-section">
+                <h2>🎮 Main Game Bareng!</h2>
+                <div class="game-card">
+                    <p>Klik hati sebanyak mungkin dalam 10 detik!</p>
+                    <button class="heart-button" id="gameBtn" onclick="clickHeart()">❤️</button>
+                    <div class="game-stats">
+                        <p>Skor: <span id="score">0</span></p>
+                        <p>Waktu: <span id="timer">10</span>s</p>
+                    </div>
+                    <button class="btn-secondary" onclick="startGame()">Mulai Game</button>
+                </div>
+            </section>
+
+            <!-- Wishes Section -->
+            <section class="wishes-section">
+                <h2>💌 Tulis Ucapan Ulang Tahun</h2>
+                
+                <!-- Form -->
+                <div class="form-card">
+                    <form onsubmit="submitWish(event)">
+                        <div class="form-group">
+                            <label for="wishName">Nama Anda:</label>
+                            <input type="text" id="wishName" placeholder="Siapa nama Anda?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wishText">Ucapan:</label>
+                            <textarea id="wishText" placeholder="Tulis ucapan spesial untuk Uzyy..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Kirim Ucapan 💝</button>
+                    </form>
+                </div>
+
+                <!-- Display Wishes -->
+                <h3>📖 Semua Ucapan</h3>
+                <div id="wishesList" class="wishes-list">
+                    <p style="text-align: center; color: #999;">Belum ada ucapan. Jadilah yang pertama! 💌</p>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Dibuat dengan ❤️ untuk Uzyy yang istimewa</p>
+                <p>Selamat menikmati hari spesialmu! 🎀✨</p>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
